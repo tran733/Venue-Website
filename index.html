@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+<style>
+body{
+  background-color:white
+}
+   *{
+        font-family:Arial, Helvetica, sans-serif;
+        }
+        .topnav {
+          right: 1%;
+          position: fixed;
+        font-size: 125%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+        }
+
+        .topnav li {
+        float: right;
+        }
+
+        .topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+          border-bottom: 3px solid black;
+          transition: border-bottom 1s;
+        }
+
+        .topnav li a:hover {
+           border-bottom: 3px solid white;
+        }
+#title{
+  background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
+  text-align:left;
+  color:white;
+  margin-top: 0px;
+  font-size:50px;
+  font-family: Arial;   
+  font-size: 15px;
+  padding: 5px;
+}
+#book{
+       background-color: orange;
+       display: block;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        margin: 5px;
+        font-size: 80%;
+        border: 2px solid orange;
+        text-decoration: none;
+      transition: background-color 1s, color 1s;
+}
+#book:hover{
+  color: orange;
+  background-color: white;
+}
+#readmore{
+  position: absolute;
+  top: 100%;
+  background-color: #FCAE1E;
+  border: 2px solid #FCAE1E;
+  color: white;
+  padding: 12px;
+  font-size: 125%;
+  animation-name: excitement;
+  animation-duration: 3s;
+  border-radius: 5px;
+    animation-iteration-count: infinite;
+
+}
+@keyframes excitement{
+  0%{
+    background-color: white;
+    color: #FCAE1E;
+  }
+  50%{
+    background-color: #FCAE1E;
+    color:white
+  }
+  100%{
+    background-color: white;
+    color: #FCAE1E;
+  }
+}
+#catch-phrase{
+  font-size: 40px;
+  font-family: Arial;
+    color:white;
+  position: absolute;
+  top: 50%;
+  right: 30%;
+}
+hr{
+  margin-top: 0px;
+  border: 2px solid #000;
+}
+#text{
+  font-size: 20px;
+  font-family: Arial;
+    color:white;
+  position: absolute;
+  top: 75%;
+  right: 20%;
+  width: 50%;
+
+}
+* {
+  font-family: 'Oswald';
+} 
+.details{
+  font-size: 150%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+}
+</style>
+<title>Speedy Venues</title>
+</head>
+<body>
+
+<!--name subject to change-->
+   <ul class = "topnav">
+          <li><button id = "book">Get Started</button></li>
+
+     <li><a href="#contact">Contact</a></li>
+        
+      </ul>
+<div>
+<h1 id="title" ><em>Speedy Venues</em></h1>
+  <h1 id="catch-phrase"><b>Attend and make venues</b></h1>
+  <p id = "text">On beautiful nights, sunny days, or stormy days. You can also really on us for a perfect venue for any event. 
+    <br/> This website gives customers a chance to purchase venues virtually, making it accessible from any electronic device.</p>
+</div>
+<center>
+  <button id = "readmore"> Read more</button></center>
+</body>
+<hr>
+<div>
+  <center><h1 id="service">Our Service</h1></center>
+  <center>
+    <div class = "details">
+      We sell and help you create venues for special occasions (weddings, concerts, parties, birthday, and graduations). We provide the best platform for buying and selling for the cheapest price for uploading and the cheapest price for buying.
+    </div>
+  </center>
+</div>
+<script>
+(function(){
+  document.getElementById("title").style.height = 9/10 *screen.height + 'px';
+
+})()
+</script>
+</body>
+</html>
