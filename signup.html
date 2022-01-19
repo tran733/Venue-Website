@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="favicon 2.png" />
+    <title>Speedy Venue</title>
+    <head>
+        <style>
+            body{
+                background:  no-repeat center center fixed;
+                background-size:cover;
+                background-image: url('signupWebBackground.jpg')
+            }
+            
+   
+            #information{
+                top: 30%;
+                right: 30%;
+                position: absolute;
+                font-family: 'Abel';
+                padding-top: 5px;
+                background-color: white;
+                width: 45%;
+                border-radius: 10px;
+                box-shadow: 2px 6px 23px 1px rgba(0,0,0,0.15);
+
+            }
+            .box {
+                height: 50px;
+                font-size: 16px;
+                width: 60%;
+                font-weight: bold;
+                box-shadow: 2px 6px 23px 1px rgba(0,0,0,0.05);
+                border-radius: 5px;
+                margin: 10px;
+                transition: background-color 1s, box-shadow 1s;
+
+
+            }
+            .box img{
+                width: 40px;
+                height: 40px;
+                float:left;
+                margin:5px;
+            }
+            .box:hover{
+                background-color: rgb(250, 250, 250);
+                box-shadow: 2px 6px 23px 1px rgba(0,0,0,0.15);
+            }
+            .box span::before{
+                content: "\A";
+                white-space: pre;
+
+            }
+            input {
+                font-size: 20px;
+                margin-top: 2%;
+                height: 40px;
+                width: 60%;
+                outline: none;
+                border-top:  #e3e6eb;
+                border-bottom: #e3e6eb;
+                border-right:  #e3e6eb;
+                border-left:   #e3e6eb;
+                transition: border-left 0.5s;
+                box-shadow: 2px 6px 23px 1px rgba(0,0,0,0.05);
+                font-family: "Abel";
+
+
+            }
+            input:focus{
+                border-left: 7px solid #436cf2;
+           
+            }
+            input[type="submit"]{
+                background-color: orange;
+                color: white;
+                border-top:  #e3e6eb;
+                border-bottom: #e3e6eb;
+                border-right:  #e3e6eb;
+                border-left:   #e3e6eb;
+                transition: border-left 1s;
+                margin-bottom: 10%;
+            }
+            input[type="submit"]:hover{
+                border-left: 15px solid orangered;
+
+            }
+            input[type="checkbox"]{
+                width: 20px;
+                height:20px;
+            }
+
+        </style>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+    <body>
+        <ul class = "topnav">
+            <li><img src = "Speedy.gif"></li>
+            <li class = "link"><a href="index.html" >Home</a></li>
+            <li class = "link"><a href="Contact.html">Contact</a></li>
+            <li class = "link"><a href="#">Venues</a></li>
+
+          </ul>
+        <center>
+            <div id = "signup">
+                <div id = "information">
+                <div class = "box">
+                    <img src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNDggNDgiPjxkZWZzPjxwYXRoIGlkPSJhIiBkPSJNNDQuNSAyMEgyNHY4LjVoMTEuOEMzNC43IDMzLjkgMzAuMSAzNyAyNCAzN2MtNy4yIDAtMTMtNS44LTEzLTEzczUuOC0xMyAxMy0xM2MzLjEgMCA1LjkgMS4xIDguMSAyLjlsNi40LTYuNEMzNC42IDQuMSAyOS42IDIgMjQgMiAxMS44IDIgMiAxMS44IDIgMjRzOS44IDIyIDIyIDIyYzExIDAgMjEtOCAyMS0yMiAwLTEuMy0uMi0yLjctLjUtNHoiLz48L2RlZnM+PGNsaXBQYXRoIGlkPSJiIj48dXNlIHhsaW5rOmhyZWY9IiNhIiBvdmVyZmxvdz0idmlzaWJsZSIvPjwvY2xpcFBhdGg+PHBhdGggY2xpcC1wYXRoPSJ1cmwoI2IpIiBmaWxsPSIjRkJCQzA1IiBkPSJNMCAzN1YxMWwxNyAxM3oiLz48cGF0aCBjbGlwLXBhdGg9InVybCgjYikiIGZpbGw9IiNFQTQzMzUiIGQ9Ik0wIDExbDE3IDEzIDctNi4xTDQ4IDE0VjBIMHoiLz48cGF0aCBjbGlwLXBhdGg9InVybCgjYikiIGZpbGw9IiMzNEE4NTMiIGQ9Ik0wIDM3bDMwLTIzIDcuOSAxTDQ4IDB2NDhIMHoiLz48cGF0aCBjbGlwLXBhdGg9InVybCgjYikiIGZpbGw9IiM0Mjg1RjQiIGQ9Ik00OCA0OEwxNyAyNGwtNC0zIDM1LTEweiIvPjwvc3ZnPg==">
+                    <span >Sign up with Google</span>
+                </div>
+                <div class = "box" style="background-color: blue;">
+                    <img src = "Microsoft.png">
+                    <span style="color:white" >Sign up with Microsoft</span>
+                </div>
+                <span style="font-size: 20px; color: #474c5e;">Sign up Information</span>
+                <form>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required><br>
+                
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required><br>
+                
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+                    
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+                    
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                    <input value = "Sign up" type="submit">
+                    <p>Have an account? <a href = "login.html" style = "color: dodgerblue">Login</a></p>
+
+                </form>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

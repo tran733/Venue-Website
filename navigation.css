@@ -1,0 +1,80 @@
+
+.topnav {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: transparent;
+    justify-content: center;
+    font-family: 'Abel';
+    text-transform: uppercase;
+    position: absolute;
+
+    
+  }
+  
+.topnav li {
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    float: left;
+  }
+  
+  .topnav  .link a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 2.5px;
+
+    
+  }
+  
+  .topnav .link a:hover {
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .topnav img{
+      width: 150px;
+      height: 150px;
+      padding: 0px;
+      margin: 10px;
+      margin-right: 10px;
+  }
+  
+  /*Edit starts here*/
+  .topnav  .link {
+    position:relative;
+    margin-top: 70px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+  }
+  
+  .topnav .link::after {
+      content: '';
+      display: block;
+      width: 0;
+      position:absolute;
+      left:50%;
+      height: 1px;
+      background: lime;
+      transition: cubic-bezier(.77,0,.18,1) 500ms;
+  }
+  
+  .topnav .link:hover::after {
+      width: 80%;
+      left: 10%;
+  }
+  
+  
+  .topnav .link {
+    transition: cubic-bezier(.77,0,.18,1) 500ms;
+  }
+  
+
+ 

@@ -1,160 +1,479 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
-<style>
-body{
-  background-color:white
-}
-   *{
-        font-family:Arial, Helvetica, sans-serif;
-        }
-        .topnav {
-          right: 1%;
-          position: fixed;
-        font-size: 125%;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: black;
-        }
-
-        .topnav li {
-        float: right;
-        }
-
-        .topnav li a {
-        display: block;
+    <meta charset="utf-8" />
+    <title>Speedy venues</title>
+    <script src="https://kit.fontawesome.com/d7176a738c.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="favicon 2.png" />
+    <style>
+       body{
+           background-color:white;
+              }
+    #service{
+        font-size: 150%;
+    }
+    .search{
+        position: absolute;
+        top: 70%;
+        background-color: transparent;
+        border: 1px solid #FCAE1E;
+        font-family: 'Abel';
+        border-radius: 300px;
         color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-          border-bottom: 3px solid black;
-          transition: border-bottom 1s;
-        }
-
-        .topnav li a:hover {
-           border-bottom: 3px solid white;
-        }
-#title{
-  background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
-  text-align:left;
-  color:white;
-  margin-top: 0px;
-  font-size:50px;
-  font-family: Arial;   
-  font-size: 15px;
-  padding: 5px;
-}
-#book{
-       background-color: orange;
-       display: block;
-        color: white;
-        text-align: center;
         padding: 12px;
-        margin: 5px;
-        font-size: 80%;
-        border: 2px solid orange;
-        text-decoration: none;
-      transition: background-color 1s, color 1s;
-}
-#book:hover{
-  color: orange;
-  background-color: white;
-}
-#readmore{
+        right: 52%;
+        font-size: 125%;
+        transition: border 500ms, color 500ms;
+     }
+     .search:hover{
+        color: #fff;
+        border: 1px solid lightcoral;
+     }
+  @keyframes excitement{
+    0%{
+      background-color: white;
+      color: #FCAE1E;
+    }
+    50%{
+      background-color: #FCAE1E;
+      color:white
+    }
+    100%{
+      background-color: white;
+      color: #FCAE1E;
+    }
+  }
+  .catch-phrase{
+    font-size: 50px;
+    font-family: 'Roboto';
+      color:white;
+    position: absolute;
+    top: 30%;
+    right: 42%;
+  }
+  hr{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+  }
+  img{
+    width: 100%;
+  }
+  #text{
+    font-size: 20px;
+    font-family: 'Roboto';
+      color:white;
+    position: absolute;
+    top: 45%;
+    right: 20%;
+    width: 50%;
+  
+  }
+  * {
+    font-family: 'Abel';
+  } 
+  .details{
+    font-size: 100%;
+    left: 25%;
+    right: 25%;
+    position: absolute;
+    font-family: "Abel";
+  }
+  #title{
+    text-align:left;
+    color:white;
+    margin-top: 0px;
+    font-size:50px;
+    font-family: Arial;   
+    font-size: 15px;
+    padding: 5px;
+  }
+  ul{
+    list-style-type: none;
+  }
+#myVideo {
   position: absolute;
-  top: 60%;
-  background-color: #FCAE1E;
-  border: 2px solid #FCAE1E;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+#login{
+    border-radius: 300px;
+    font-family: 'Abel';
+    border: 1px solid lime;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+}
+.venues li {
+  display: table-cell;
+  float:left;
+}
+.venues button{
+  position:relative;
+  top: -50px;
+  right: 0px;
   color: white;
-  padding: 12px;
-  font-size: 125%;
- 
+}
+.venues button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgba(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
 
+.venues button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
-@keyframes excitement{
-  0%{
-    background-color: white;
-    color: #FCAE1E;
-  }
-  50%{
-    background-color: #FCAE1E;
-    color:white
-  }
-  100%{
-    background-color: white;
-    color: #FCAE1E;
-  }
-}
-#catch-phrase{
-  font-size: 40px;
-  font-family: Arial;
-    color:white;
-  position: absolute;
-  top: 25%;
-  right: 30%;
-}
-hr{
-  margin-top: 0px;
-  border: 2px solid #000;
-}
-#text{
-  font-size: 20px;
-  font-family: Arial;
-    color:white;
-  position: absolute;
-  top: 40%;
-  right: 20%;
-  width: 50%;
 
+.venues button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
-* {
-  font-family: 'Oswald';
-} 
-.details{
-  font-size: 150%;
-  left: 25%;
-  right: 25%;
+
+.venues button:hover span {
+  padding-right: 20px;
+}
+
+.venues button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#list{
+  display:flex;
+  width: 75%;
+  flex-wrap: wrap;
+  border: 1px solid #d3d3d3;
+  padding: 2%;
+  
+}
+.venues {
+  flex: 20%;
+  margin: 5px;
+}
+#footer{
+  background-color: black;
+  margin: -10px;
+  margin-top: 10%;
+  width: 100%;
   position: absolute;
 }
-</style>
-<title>Speedy Venues</title>
+.top{
+  font-size: 30px;
+  border: 1px solid lightsalmon;
+  border-radius: 300px;
+  text-decoration: none;
+  color: white;
+  background-color: lightsalmon;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10%;
+  transition: background-color 500ms, color 500ms;
+}
+.top:hover{
+  background-color: white;
+  color: lightsalmon;
+}
+
+    </style>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="Slideshow.css">
+    <link rel="stylesheet" href="Overlay.css">
+    <link rel="stylesheet" href="footer.css">
+
+
 </head>
 <body>
-
-<!--name subject to change-->
-   <ul class = "topnav">
-          <li><button id = "book">Get Started</button></li>
-
-     <li><a href="#contact">Contact</a></li>
-        
+ 
+    <!--name subject to change-->
+    <video autoplay muted loop id="myVideo">
+        <source src="login-background.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <p id = "#top"></p>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <input type="text" id="myInput" onkeyup="search()" placeholder="Search for states.." title="Type in a name">
+      
+      <ul id="myUL">
+        <li><a href = "Alabama.html">Alabama</a></li>
+      <li><a href = "Alaska.html">Alaska</a></li>
+      <li><a href = "Arizona.html">Arizona</a></li>
+      <li><a href = "Arkansas.html">Arkansas</a></li>
+      <li><a href = "California.html">California</a></li>
+      <li><a href = "Colorado.html">Colorado</a></li>
+      <li><a href = "Connecticut.html">Connecticut</a></li>
+      <li><a href = "Delaware.html">Delaware</a></li>
+      <li><a href = "Florida.html">Florida</a></li>
+      <li><a href = "Georgia.html">Georgia</a></li>
+      <li><a href = "Hawaii.html">Hawaii</a></li>
+      <li><a href = "Idaho.html">Idaho</a></li>
+      <li><a href = "Illinois.html">Illinois</a></li>
+      <li><a href = "Indiana.html">Indiana</a></li>
+      <li><a href = "Iowa.html">Iowa</a></li>
+      <li><a href = "Kansas.html">Kansas</a></li>
+      <li><a href = "Kentucky.html">Kentucky</a></li>
+      <li><a href = "Louisiana.html">Louisiana</a></li>
+      <li><a href = "Maine.html">Maine</a></li>
+      <li><a href = "Maryland.html">Maryland</a></li>
+      <li><a href = "Massachusetts.html">Massachusetts</a></li>
+      <li><a href = "Michigan.html">Michigan</a></li>
+      <li><a href = "Minnesota.html">Minnesota</a></li>
+      <li><a href = "Mississippi.html">Mississippi</a></li>
+      <li><a href = "Missouri.html">Missouri</a></li>
+      <li><a href = "Montana.html">Montana</a></li>
+      <li><a href = "Nebraska.html">Nebraska</a></li>
+      <li><a href = "Nevada.html">Nevada</a></li>
+      <li><a href = "New Hampshire.html">New Hampshire</a></li>
+      <li><a href = "New Jersey.html">New Jersey</a></li>
+      <li><a href = "New Mexico.html">New Mexico</a></li>
+      <li><a href = "New York.html">New York</a></li>
+      <li><a href = "North Carolina.html">North Carolina</a></li>
+      <li><a href = "North Dakota.html">North Dakota</a></li>
+      <li><a href = "Ohio.html">Ohio</a></li>
+      <li><a href = "Oklahoma.html">Oklahoma</a></li>
+      <li><a href = "Oregon.html">Oregon</a></li>
+      <li><a href = "Pennsylvania.html">Pennsylvania</a></li>
+      <li><a href = "Rhode Island.html">Rhode Island</a></li>
+      <li><a href = "South Carolina.html">South Carolina</a></li>
+      <li><a href = "South Dakota.html">South Dakota</a></li>
+      <li><a href = "Tennessee.html">Tennessee</a></li>
+      <li><a href = "Texas.html">Texas</a></li>
+      <li><a href = "Utah.html">Utah</a></li>
+      <li><a href = "Vermont.html">Vermont</a></li>
+      <li><a href = "Virginia.html">Virginia</a></li>
+      <li><a href = "Washington.html">Washington</a></li>
+      <li><a href = "West Virginia.html">West Virginia</a></li>
+      <li><a href = "Wisconsin.html">Wisconsin</a></li>
+      <li><a href = "Wyoming.html">Wyoming</a></li>
       </ul>
-<div>
-<h1 id="title" ><em>Speedy Venues</em></h1>
-  <h1 id="catch-phrase"><b>Attend and make venues</b></h1>
-  <p id = "text">On beautiful nights, sunny days, or stormy days. You can also really on us for a perfect venue for any event. 
-    <br/> This website gives customers a chance to purchase venues virtually, making it accessible from any electronic device.</p>
-</div>
-<center>
-  <button id = "readmore">Read more</button></center>
-</body>
-<hr>
-<div>
-  <center><h1 id="service">Our Service</h1></center>
-  <center>
-    <div class = "details">
-      We sell and help you create venues for special occasions (weddings, concerts, parties, birthday, and graduations). We provide the best platform for buying and selling for the cheapest price for uploading and the cheapest price for buying.
+      
+      </div>
+    <ul class = "topnav">
+            <li><img src = "Speedy.gif"></li>
+            <li class="link"><a href="#">Get Started<a></li>
+            <li class = "link"><a href="Contact.html">Contact</a></li>
+            <li class = "link"><a href="login.html">Login/Sign up</a></li>
+            <li class = "link"><a href="#" onclick = "openNav">Venues</a></li>
+        </ul>
+     
+    <div>
+    <h1 id="title"> </h1>
+    <h1 class ="catch-phrase"><b>Attend & Make</b><br></h1>
+    <h1 class = "catch-phrase" style = "top: 42%; right: 30%; font-size: 40px;">Meetings, Conferences, & Events</h1>
     </div>
-  </center>
-</div>
-<script>
-(function(){
-  document.getElementById("title").style.height = 8/10 *screen.height + 'px';
+    <button class = "search" onclick = "openNav()"> <i class = "fas fa-search"></i> SEARCH FOR VENUES</button>
+    <button class = "search" style = "right: 35%;"><i class="fas fa-plus-square"></i> CREATE VENUES</button>
+    <!--<iframe src="https://www.google.com/maps" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+    <center>
+      <div>
+        <div id = "list">
+          <div class = "venues">
+             <img src = "HomePageStadiumImg.jpg">
+             <button><span>Stadiums & Arenas</span></button>
+          </div>
+          <div class = "venues">
+            <img src = "HomePageSchoolImg.jpg">
+            <button><span>Colleges & Universities</span></button>
+          </div>
+         <div class = "venues">
+          <img src = "HomePageRestaurant.jpg">
+          <button><span>Restaurants & Bars</span></button>
+         </div>
+         <div class = "venues">
+          <img src = "HomePageCamp.jpg">
+          <button><span>Camps & Retreats</span></button>
+         </div>
+         <div class = "venues">
+          <img src = "HomePageMeeting.jpg">
+          <button><span>Conferences & Meetings</span></button>
+         </div>
+         <div class = "venues">
+          <img src = "HomePageHistoricalEvent.jpg">
+          <button><span>Cultural & Traditional Events</span></button>
+         </div>
+         <div class = "venues">
+          <img src = "HomePageParty.jpg">
+          <button><span>Party & Special Venues</span></button>
+         </div>
+         <div class = "venues">
+          <img src = "HomePageWedding.jpg">
+          <button><span>Weddings & Banquets</span></button>
+         </div>
+        </div>
+        </div>
+        <h1>A Perfect Venue <span style = "color: #d3d3d3">for a</span> Perfect Person</h1>
+        <p style = "font-size: 30px;">We bring family and friends together with our <span><b>NEVER-SEEN-SPECTACULAR</b></span> venues for your events.</p>
+        <p style = "font-size: 30px;">For Little Cost, Fast service, and Spectacular Venues</p>
+        <div class="container">
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="SlideshowImage1.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="SlideshowImage2.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="SlideshowImage3.jpg" style="width:100%">
+          </div>
+            
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="SlideshowImage4.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="SlideshowImage5.jpg" style="width:100%">
+          </div>
+            
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="SlideshowImage6.jpg" style="width:100%">
+          </div>
+            
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="SlideshowImage1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Featured Traditional Venue">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="SlideshowImage2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Featured Conference Venue">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="SlideshowImage3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Featured Wedding Venue">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="SlideshowImage4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Featured Banquet Hall">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="SlideshowImage5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Featured Party Venue">
+            </div>    
+            <div class="column">
+              <img class="demo cursor" src="SlideshowImage6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Featured Restaurant Venue">
+            </div>
+          </div>
+        </div>
+        
+      </center>
 
-})()
-</script>
+        <div id = "footer">
+          <center>
+          <a href = "#top" class = "top">Go To Top</a>
+          </center>
+          <ul id = "footerHolder">
+            <li >          <ul class = "bottomfooter">
+            <li><a href = "#"><h3>Information<h3></a></li>
+            <li><a href = "#" class = "info">More Information</a></li>
+            <li><a href = "#" class = "info">About Us</a></li>
+            <li><a href = "#" class = "info">Privacy and Policies</a></li>
+            <li><a href = "#" class = "info">United State Venues</a></li>
+          </ul>
+          </li>
+          <li>
+            <ul class = "bottomfooter">
+              <li><a href = "#"><h3>Venue Types<h3></a></li>
+              <li><a href = "#"  class = "info">Arenas & Stadiums</a></li>
+              <li><a href = "#" class = "info">Camps & Retreats</a></li>
+              <li><a href = "#" class = "info">Weddings and Banquets</a></li>
+              <li><a href = "#" class = "info">Conferences and Meetings</a></li>
+              <li><a href = "#" class = "info">Colleges and Universities</a></li>
+              <li><a href = "#" class = "info">Parties and Special Venues</a></li>
+              <li><a href = "#" class = "info">Cultural and Traditional Events</a></li>
+              <li><a href = "#" class = "info">Restaurants and Bars</a></li>
+
+
+
+
+            </ul>
+          </li>
+          </ul>
+          
+        </div>
+    </body>
+  
+      <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+setInterval(function(){plusSlides(1)}, 2000);
+          (function(){
+  document.getElementById("title").style.height = screen.height + 'px';
+
+})();
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+function search() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+      </script>
 </body>
 </html>
