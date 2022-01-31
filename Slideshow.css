@@ -37,6 +37,8 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+     margin-bottom:2px;
+      /*just changed this*/
   }
   
   /* Position the "next button" to the right */
