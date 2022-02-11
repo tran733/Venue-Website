@@ -10,7 +10,7 @@
   }
   
   .dropdown {
-    position: static;
+    position: relative;
     display: inline-block;
   
   }
